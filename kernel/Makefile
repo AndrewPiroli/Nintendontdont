@@ -29,7 +29,7 @@ CFLAGS	:= -mbig-endian -O3 -std=gnu89 -g -I. -Wall \
 CPPFLAGS := -I. -I../fatfs -I../codehandler
 
 ASFLAGS	:= -mbig-endian -mcpu=arm926ej-s
-LDFLAGS	:= -nostartfiles -nodefaultlibs -mbig-endian -Wl,--gc-sections,-T,kernel.ld,-Map,kernel.map -n
+LDFLAGS	:= -nostartfiles -nodefaultlibs -mbig-endian -Wl,--allow-multiple-definition,--gc-sections,-T,kernel.ld,-Map,kernel.map -n
 
 TARGET	:= kernel.elf
 OBJECTS	:= start.o common.o alloc.o GCAM.o JVSIO.o JVSIOMessage.o FST.o DI.o RealDI.o \

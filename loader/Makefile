@@ -33,7 +33,7 @@ CFLAGS	:= -O3 -g -std=gnu89 -Wno-format-truncation \
 CXXFLAGS := $(CFLAGS)
 
 # NOTE: Do NOT change to := - needed for proper expansion of $(CURDIR) later.
-LDFLAGS	= -g $(MACHDEP) -Wl,-Map,$(notdir $@).map,-wrap,wiiuse_register
+LDFLAGS	= -g $(MACHDEP) -Wl,--allow-multiple-definition,-Map,$(notdir $@).map,-wrap,wiiuse_register
 
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
